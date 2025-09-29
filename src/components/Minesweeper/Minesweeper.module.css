@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  gap: 15px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+.mine {
+  width: 25px;
+  height: 25px;
+  background-color: grey;
+  border: 1px solid var(--background);
+  border-radius: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: var(--background);
+  transition: background-color 0.07s;
+
+  &:hover {
+    background-color: darkgrey;
+  }
+
+  &[data-revealed="true"] {
+    background-color: darkgreen;
+  }
+
+  &[data-mine-hit="true"] {
+    background-color: red;
+  }
+}
